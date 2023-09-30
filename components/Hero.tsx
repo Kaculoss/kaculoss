@@ -1,15 +1,12 @@
 "use client";
 
 import styles from "@/styles";
-import { ComputersCanvas } from "./canvas";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import hero from "../assets/heroImage.png";
 import Image from "next/image";
+import hero from "../assets/heroImage.png";
 
 const Hero = () => {
   return (
-    <section className="relative w-full z-10 md:z-0 -mb-[450px] lg:-mb-[500px] h-screen mx-auto">
+    <section className="relative w-full z-10 md:z-0 -mb-[450px] lg:-mb-[600px] h-screen mx-auto">
       <div
         className={`${styles.paddingX} absolute inset-0  top-[120px] max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center lg:items-start gap-0 lg:gap-8 `}
       >
