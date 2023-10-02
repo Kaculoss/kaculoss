@@ -98,7 +98,7 @@ const Contact = () => {
               <span className="text-white font-medium mb-4">Your Name</span>
               <input
                 type="text"
-                name="from_name"
+                name="name"
                 value={form.name}
                 onChange={handleChange}
                 required
@@ -110,7 +110,7 @@ const Contact = () => {
               <span className="text-white font-medium mb-4">Your email</span>
               <input
                 type="email"
-                name="from_email"
+                name="email"
                 required
                 value={form.email}
                 onChange={handleChange}
