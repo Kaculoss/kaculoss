@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, ChangeEvent } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -8,66 +8,55 @@ import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 import styles from "@/styles";
 import { SectionWrapper } from ".";
-
-const service_id = process.env.EMAILJS_SERVICE_ID as string;
-const template_id = process.env.EMAILJS_TEMPLATE_ID as string;
-const public_key = process.env.EMAILJS_PUBLIC_KEY as string;
+import { FieldValues, useForm, SubmitHandler } from "react-hook-form";
+import { useToast } from "./use-toast";
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement | null>(null);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
+  const form = useRef<HTMLFormElement | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const { toast } = useToast();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FieldValues>({
+    defaultValues: {
+      from_name: "",
+      from_email: "",
+      message: "",
+    },
   });
 
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    setLoading(true);
-
-    emailjs
-      .send(
-        service_id,
-        template_id,
-        {
-          from_name: form.name,
-          from_email: form.email,
-          message: form.message,
-        },
-        public_key
-      )
-      .then(() => {
-        alert("Thank you. I will get back to you as soon as possible.");
-
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-      })
-      .catch((error) => {
-        console.error(error);
-
-        alert(
-          "Ahh, something went wrong. Please email me directly on 'sani@kaculoss.tech' and I will get back to you as soon as possible."
-        );
-      })
-      .finally(() => setLoading(false));
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    if (form.current) {
+      setIsLoading(true);
+      emailjs
+        .sendForm(
+          "service_bwd4999",
+          "template_nkd9z5a",
+          form.current,
+          "oP7eB9SkMkNR6IIJk"
+        )
+        .then(() =>
+          toast({
+            title: "Success",
+            description:
+              "Thank you. I will get back to you as soon as possible.",
+          })
+        )
+        .catch((error) => {
+          console.error(error);
+          toast({
+            title: "Failed",
+            description:
+              "Ahh, something went wrong. Please email me directly on 'sani@kaculoss.tech' and I will get back to you as soon as possible.",
+            variant: "destructive",
+          });
+        })
+        .finally(() => setIsLoading(false));
+    }
   };
 
   return (
@@ -83,44 +72,59 @@ const Contact = () => {
           <h3 className={styles.sectionHeadText}>Contact.</h3>
 
           <form
-            ref={formRef}
-            onSubmit={handleSubmit}
+            ref={form}
+            onSubmit={handleSubmit(onSubmit)}
             className="mt-12 flex flex-col gap-8"
           >
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Name</span>
               <input
                 type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                required
+                id="from_name"
+                {...register("from_name", { required: true })}
+                autoComplete="from_name"
                 placeholder="John Doe"
-                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                disabled={isLoading}
+                className={`${
+                  errors["from_name"] &&
+                  "focus:ring-1 focus:ring-inset focus:ring-rose-500"
+                } ${
+                  isLoading && "cursor-default opacity-50"
+                } bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium `}
               />
             </label>
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your email</span>
               <input
                 type="email"
-                name="email"
-                required
-                value={form.email}
-                onChange={handleChange}
+                id="from_email"
+                {...register("from_email", { required: true })}
+                autoComplete="from_email"
                 placeholder="johndoe@email.com"
-                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                disabled={isLoading}
+                className={`${
+                  errors["from_name"] &&
+                  "focus:ring-1 focus:ring-inset focus:ring-rose-500"
+                } ${
+                  isLoading && "cursor-default opacity-50"
+                } bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium `}
               />
             </label>
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Message</span>
               <textarea
                 rows={7}
-                name="message"
-                value={form.message}
-                required
-                onChange={handleChange}
+                id="message"
+                autoComplete="message"
+                {...register("message", { required: true })}
+                disabled={isLoading}
                 placeholder="your message"
-                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                className={`${
+                  errors["from_name"] &&
+                  "focus:ring-1 focus:ring-inset focus:ring-rose-500"
+                } ${
+                  isLoading && "cursor-default opacity-50"
+                } bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium `}
               />
             </label>
 
@@ -128,7 +132,7 @@ const Contact = () => {
               type="submit"
               className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
             >
-              {loading ? "Sending..." : "Send"}
+              {isLoading ? "Sending..." : "Send"}
             </button>
           </form>
         </motion.div>
