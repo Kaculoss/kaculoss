@@ -47,9 +47,7 @@ const Contact = () => {
           template_id,
           {
             from_name: form.name,
-            to_name: "Keezy",
             from_email: form.email,
-            to_email: "sanialhassan863@gmail.com",
             message: form.message,
           },
           public_key
@@ -74,7 +72,7 @@ const Contact = () => {
         );
     } else {
       alert(
-        "Ahh, something went wrong. Please email me directly on 'sanialhassan853@gmail.com' and I will get back to you as soon as possible."
+        "Ahh, something went wrong. Please email me directly on 'sani@kaculoss.tech' and I will get back to you as soon as possible."
       );
     }
   };
@@ -100,9 +98,10 @@ const Contact = () => {
               <span className="text-white font-medium mb-4">Your Name</span>
               <input
                 type="text"
-                name="name"
+                name="from_name"
                 value={form.name}
                 onChange={handleChange}
+                required
                 placeholder="John Doe"
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
@@ -111,7 +110,8 @@ const Contact = () => {
               <span className="text-white font-medium mb-4">Your email</span>
               <input
                 type="email"
-                name="email"
+                name="from_email"
+                required
                 value={form.email}
                 onChange={handleChange}
                 placeholder="johndoe@email.com"
@@ -124,6 +124,7 @@ const Contact = () => {
                 rows={7}
                 name="message"
                 value={form.message}
+                required
                 onChange={handleChange}
                 placeholder="your message"
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"

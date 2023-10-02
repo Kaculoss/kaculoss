@@ -597,7 +597,7 @@ const socials = [
   {
     name: "linkedin",
     imgUrl: linkedin,
-    link: "https://www.linkedin.com/in/sani-mohammed-alhassan-keezy/",
+    link: "https://www.linkedin.com/in/kaculoss/",
   },
   {
     name: "instagram",

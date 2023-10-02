@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="flex items-center justify-between flex-wrap gap-5">
           <h4 className="font-bold text-base text-secondary tracking-wider">
             <span className="font-medium text-lg text-white ">Email : </span>
-            sanialhassan853@gmail.com
+            sani@kaculoss.tech
           </h4>
           <h4 className="font-bold text-base text-secondary tracking-wider">
             <span className="font-medium text-lg text-white ">Address : </span>
