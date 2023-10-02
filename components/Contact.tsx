@@ -9,9 +9,9 @@ import { slideIn } from "../utils/motion";
 import styles from "@/styles";
 import { SectionWrapper } from ".";
 
-const service_id = process.env.EMAILJS_SERVICE_ID;
-const template_id = process.env.EMAILJS_TEMPLATE_ID;
-const public_key = process.env.EMAILJS_PUBLIC_KEY;
+const service_id = process.env.EMAILJS_SERVICE_ID as string;
+const template_id = process.env.EMAILJS_TEMPLATE_ID as string;
+const public_key = process.env.EMAILJS_PUBLIC_KEY as string;
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -38,43 +38,36 @@ const Contact = () => {
   const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (template_id && service_id && public_key) {
-      setLoading(true);
+    setLoading(true);
 
-      emailjs
-        .send(
-          service_id,
-          template_id,
-          {
-            from_name: form.name,
-            from_email: form.email,
-            message: form.message,
-          },
-          public_key
-        )
-        .then(
-          () => {
-            setLoading(false);
-            alert("Thank you. I will get back to you as soon as possible.");
+    emailjs
+      .send(
+        service_id,
+        template_id,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+        },
+        public_key
+      )
+      .then(() => {
+        alert("Thank you. I will get back to you as soon as possible.");
 
-            setForm({
-              name: "",
-              email: "",
-              message: "",
-            });
-          },
-          (error) => {
-            setLoading(false);
-            console.error(error);
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error(error);
 
-            alert("Ahh, something went wrong. Please try again.");
-          }
+        alert(
+          "Ahh, something went wrong. Please email me directly on 'sani@kaculoss.tech' and I will get back to you as soon as possible."
         );
-    } else {
-      alert(
-        "Ahh, something went wrong. Please email me directly on 'sani@kaculoss.tech' and I will get back to you as soon as possible."
-      );
-    }
+      })
+      .finally(() => setLoading(false));
   };
 
   return (
