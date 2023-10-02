@@ -18,8 +18,8 @@ const config: Config = {
         primary: "#050816",
         secondary: "#aaa6c3",
         tertiary: "#151030",
-        background: "#11998e",
-        foreground: "hsl(213 31% 91%)",
+        background: "#0e3817",
+        foreground: "#ffffff",
         destructive: {
           DEFAULT: "hsl(0 63% 31%)",
           foreground: "hsl(210 40% 98%)",
