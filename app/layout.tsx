@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "react-vertical-timeline-component/style.min.css";
 import type { Metadata } from "next";
 import { Poppins, Gugi } from "next/font/google";
+import { Toaster } from "@/components";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,7 +33,10 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${poppins.className} ${gugi.variable} ${gugi.className}`}
     >
-      <body>{children}</body>
+      <body>
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }

@@ -11,3 +11,4 @@ export { default as Footer } from "./Footer";
 export { default as SectionWrapper } from "./SectionWrapper";
 export { default as Hero3D } from "./Hero3D";
 export { default as ToolTip } from "./ToolTip";
+export { default as Toaster } from "./Toaster";
