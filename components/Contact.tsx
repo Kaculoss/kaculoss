@@ -20,6 +20,7 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FieldValues>({
     defaultValues: {
@@ -29,10 +30,10 @@ const Contact = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     if (form.current) {
       setIsLoading(true);
-      emailjs
+      await emailjs
         .sendForm(
           "service_bwd4999",
           "template_nkd9z5a",
@@ -43,9 +44,19 @@ const Contact = () => {
           toast({
             title: "Success",
             description:
-              "Thank you. I will get back to you as soon as possible.",
+              "Thank you for your message. I will get back to you as soon as possible.",
           })
         )
+        .then(() => {
+          fetch("/api/welcome", {
+            method: "POST",
+            body: JSON.stringify({
+              name: data.from_name,
+              email: data.from_email,
+            }),
+          });
+        })
+        .then(() => reset())
         .catch((error) => {
           console.error(error);
           toast({
