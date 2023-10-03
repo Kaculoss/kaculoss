@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     const data = await resend.sendEmail({
       from: "sani@kaculoss.tech",
       to: email,
-      subject: `Thank You for Contacting Us, John Doe`,
+      subject: `Thank You for Contacting Me, ${name}`,
       react: Welcome({ name }),
     });
 

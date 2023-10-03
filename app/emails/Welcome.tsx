@@ -42,7 +42,7 @@ const Welcome = ({ name }: IProps) => {
             </Text>
             <Button
               className="bg-purple-700 text-white font-bold px-3 py-3 rounded-md"
-              href="https://kaculoss.com/#works"
+              href="https://kaculoss.com/#work"
             >
               Visit My Projects Page
             </Button>
@@ -66,8 +66,8 @@ const Welcome = ({ name }: IProps) => {
               .
             </Text>
             <Text className="text-base font-medium text-gray-700">
-              Once again, thank you for considering us, {name}. We look forward
-              to the opportunity to assist you with your needs.
+              Once again, thank you for considering me, {name.split(" ")[0]}. I
+              look forward to the opportunity to assist you with your needs.
             </Text>
             <Text className="text-base font-medium text-gray-700">
               Best regards,
