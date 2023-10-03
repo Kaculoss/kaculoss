@@ -25,6 +25,7 @@ const Contact = () => {
   } = useForm<FieldValues>({
     defaultValues: {
       from_name: "",
+      number: "",
       from_email: "",
       message: "",
     },
@@ -93,11 +94,26 @@ const Contact = () => {
                 type="text"
                 id="from_name"
                 {...register("from_name", { required: true })}
-                autoComplete="from_name"
                 placeholder="John Doe"
                 disabled={isLoading}
                 className={`${
                   errors["from_name"] &&
+                  "focus:ring-1 focus:ring-inset focus:ring-rose-500"
+                } ${
+                  isLoading && "cursor-default opacity-50"
+                } bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium `}
+              />
+            </label>
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Your Number</span>
+              <input
+                type="tel"
+                id="number"
+                {...register("number", { required: true })}
+                placeholder="+233549853041"
+                disabled={isLoading}
+                className={`${
+                  errors["number"] &&
                   "focus:ring-1 focus:ring-inset focus:ring-rose-500"
                 } ${
                   isLoading && "cursor-default opacity-50"
@@ -110,7 +126,6 @@ const Contact = () => {
                 type="email"
                 id="from_email"
                 {...register("from_email", { required: true })}
-                autoComplete="from_email"
                 placeholder="johndoe@email.com"
                 disabled={isLoading}
                 className={`${
@@ -126,7 +141,6 @@ const Contact = () => {
               <textarea
                 rows={7}
                 id="message"
-                autoComplete="message"
                 {...register("message", { required: true })}
                 disabled={isLoading}
                 placeholder="your message"
