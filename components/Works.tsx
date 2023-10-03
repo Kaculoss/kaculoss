@@ -85,7 +85,7 @@ const Works = () => {
   const [isViewAll, setIsViewAll] = useState<boolean>(false);
 
   return (
-    <SectionWrapper idName="">
+    <SectionWrapper idName="projects">
       <div className="w-full flex gap-5 items-center justify-between">
         <div className="md:flex-[5] w-full flex-1">
           <motion.div variants={textVariant()}>

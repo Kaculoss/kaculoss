@@ -42,7 +42,7 @@ const Welcome = ({ name }: IProps) => {
             </Text>
             <Button
               className="bg-purple-700 text-white font-bold px-3 py-3 rounded-md"
-              href="https://kaculoss.com/#work"
+              href="https://kaculoss.com/#projects"
             >
               Visit My Projects Page
             </Button>
