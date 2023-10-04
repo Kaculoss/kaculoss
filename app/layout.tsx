@@ -3,6 +3,7 @@ import "react-vertical-timeline-component/style.min.css";
 import type { Metadata } from "next";
 import { Poppins, Gugi } from "next/font/google";
 import { Toaster } from "@/components";
+import GoogleAnalytics from "@/GoogleAnalytics";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -34,6 +35,9 @@ export default function RootLayout({
       className={`${poppins.variable} ${poppins.className} ${gugi.variable} ${gugi.className}`}
     >
       <body>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
         <Toaster />
         {children}
       </body>
