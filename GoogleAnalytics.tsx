@@ -1,6 +1,12 @@
 import Script from "next/script";
 
-const GoogleAnalytics = ({ ga_id }: { ga_id: string }) => (
+const GoogleAnalytics = ({
+  ga_id,
+  ga_key,
+}: {
+  ga_id: string;
+  ga_key: string;
+}) => (
   <>
     <Script
       async
@@ -16,6 +22,25 @@ const GoogleAnalytics = ({ ga_id }: { ga_id: string }) => (
           gtag('js', new Date());
 
           gtag('config', '${ga_id}');
+        `,
+      }}
+    ></Script>
+    <Script
+      id="google-analytics"
+      dangerouslySetInnerHTML={{
+        __html: `
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+              'send_to': '${ga_id}/${ga_key}',
+              'event_callback': callback
+            });
+           return false;
+          }
         `,
       }}
     ></Script>
