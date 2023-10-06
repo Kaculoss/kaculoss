@@ -30,7 +30,7 @@ const GoogleAnalytics = ({
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', '${ga_id || "AW-11360768460"}');
+        gtag('config', '${ga_id}');
       `}
     </Script>
     <Script
@@ -46,9 +46,7 @@ const GoogleAnalytics = ({
       // }}
     >
       {`
-        gtag('event', 'conversion', {'send_to': '${ga_id || "AW-11360768460"}/${
-        ga_key || "W0CoCNvIoOgYEMyjnqkq"
-      }'});
+        gtag('event', 'conversion', {'send_to': '${ga_id}/${ga_key}', 'value': 1.0, 'currency': 'USD'});
       `}
     </Script>
   </>

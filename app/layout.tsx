@@ -35,10 +35,13 @@ export default function RootLayout({
       className={`${poppins.variable} ${poppins.className} ${gugi.variable} ${gugi.className}`}
     >
       <body>
-        <GoogleAnalytics
-          ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
-          ga_key={process.env.NEXT_PUBLIC_GOOGLE_KEY}
-        />
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS &&
+        process.env.NEXT_PUBLIC_GOOGLE_KEY ? (
+          <GoogleAnalytics
+            ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
+            ga_key={process.env.NEXT_PUBLIC_GOOGLE_KEY}
+          />
+        ) : null}
         <Toaster />
         {children}
       </body>
