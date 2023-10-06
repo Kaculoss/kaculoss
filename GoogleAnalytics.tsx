@@ -4,8 +4,8 @@ const GoogleAnalytics = ({
   ga_id,
   ga_key,
 }: {
-  ga_id: string;
-  ga_key: string;
+  ga_id?: string;
+  ga_key?: string;
 }) => (
   <>
     <Script
@@ -21,7 +21,7 @@ const GoogleAnalytics = ({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${ga_id}');
+          gtag('config', '${ga_id || "AW-11360768460"}');
         `,
       }}
     ></Script>
@@ -36,7 +36,9 @@ const GoogleAnalytics = ({
               }
             };
             gtag('event', 'conversion', {
-              'send_to': '${ga_id}/${ga_key}',
+              'send_to': '${ga_id || "AW-11360768460"}/${
+          ga_key || "W0CoCNvIoOgYEMyjnqkq"
+        }',
               'event_callback': callback
             });
            return false;
