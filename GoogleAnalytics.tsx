@@ -15,28 +15,42 @@ const GoogleAnalytics = ({
     ></Script>
     <Script
       id="google-analytics"
-      dangerouslySetInnerHTML={{
-        __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+      // dangerouslySetInnerHTML={{
+      //   __html: `
+      //     window.dataLayer = window.dataLayer || [];
+      //     function gtag(){dataLayer.push(arguments);}
+      //     gtag('js', new Date());
 
-          gtag('config', '${ga_id || "AW-11360768460"}');
-        `,
-      }}
-    ></Script>
+      //     gtag('config', '${ga_id || "AW-11360768460"}');
+      //   `,
+      // }}
+    >
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '${ga_id || "AW-11360768460"}');
+      `}
+    </Script>
     <Script
       id="google-analytics"
-      dangerouslySetInnerHTML={{
-        __html: `
-          gtag('event', 'conversion', {
-            'send_to': '${ga_id || "AW-11360768460"}/${
-          ga_key || "W0CoCNvIoOgYEMyjnqkq"
-        }'
-          });
-        `,
-      }}
-    ></Script>
+      // dangerouslySetInnerHTML={{
+      //   __html: `
+      //     gtag('event', 'conversion', {
+      //       'send_to': '${ga_id || "AW-11360768460"}/${
+      //     ga_key || "W0CoCNvIoOgYEMyjnqkq"
+      //   }'
+      //     });
+      //   `,
+      // }}
+    >
+      {`
+        gtag('event', 'conversion', {'send_to': '${ga_id || "AW-11360768460"}/${
+        ga_key || "W0CoCNvIoOgYEMyjnqkq"
+      }'});
+      `}
+    </Script>
   </>
 );
 export default GoogleAnalytics;
