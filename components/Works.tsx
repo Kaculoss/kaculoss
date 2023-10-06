@@ -9,6 +9,7 @@ import Image, { StaticImageData } from "next/image";
 import { Tilt } from "react-tilt";
 import { SectionWrapper } from ".";
 import { useState } from "react";
+import Link from "next/link";
 
 interface IProps {
   index: number;
@@ -40,9 +41,10 @@ const ProjectCard = ({
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div
-          className="relative w-full h-[230px]"
-          onClick={() => window.open(link, "_blank")}
+        <Link
+          href={link}
+          target="_blank"
+          className="relative w-full h-[230px] cursor-pointer"
         >
           <Image
             src={image}
@@ -62,7 +64,7 @@ const ProjectCard = ({
               />
             </div>
           </div>
-        </div>
+        </Link>
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
