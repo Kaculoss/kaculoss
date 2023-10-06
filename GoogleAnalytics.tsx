@@ -29,20 +29,11 @@ const GoogleAnalytics = ({
       id="google-analytics"
       dangerouslySetInnerHTML={{
         __html: `
-          function gtag_report_conversion(url) {
-            var callback = function () {
-              if (typeof(url) != 'undefined') {
-                window.location = url;
-              }
-            };
-            gtag('event', 'conversion', {
-              'send_to': '${ga_id || "AW-11360768460"}/${
+          gtag('event', 'conversion', {
+            'send_to': '${ga_id || "AW-11360768460"}/${
           ga_key || "W0CoCNvIoOgYEMyjnqkq"
-        }',
-              'event_callback': callback
-            });
-           return false;
-          }
+        }'
+          });
         `,
       }}
     ></Script>
