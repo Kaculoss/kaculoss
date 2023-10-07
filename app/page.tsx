@@ -5,7 +5,6 @@ import {
   Feedbacks,
   Footer,
   Hero,
-  Hero3D,
   Navbar,
   Tech,
   Works,
@@ -18,7 +17,6 @@ export default function Home() {
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <Navbar />
         <Hero />
-        <Hero3D />
       </div>
       <About />
       <Experience />
