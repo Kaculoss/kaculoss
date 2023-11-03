@@ -33,6 +33,7 @@ import tesla from "./company/tesla.png";
 import knust from "./company/knust.png";
 import aesl from "./company/aesl.png";
 import kaculoss from "./company/kaculoss.png";
+import ug from "./company/ug.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -50,6 +51,8 @@ import metaversus from "./projects/metaversus.jpeg";
 import netflix from "./projects/netflix.jpeg";
 import space from "./projects/space.jpeg";
 import three from "./projects/three-js.jpeg";
+import k_store_admin from "./projects/k-blog.jpeg";
+import k_store from "./projects/k-store.jpeg";
 
 import cube from "./cube.png";
 
@@ -105,4 +108,7 @@ export {
   instagram,
   linkedin,
   cube,
+  k_store,
+  k_store_admin,
+  ug,
 };

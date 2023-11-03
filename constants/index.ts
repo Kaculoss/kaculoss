@@ -18,6 +18,8 @@ import {
   javascript,
   jobit,
   jobster,
+  k_store,
+  k_store_admin,
   kaculoss,
   knust,
   linkedin,
@@ -37,6 +39,7 @@ import {
   tripguide,
   twitter,
   typescript,
+  ug,
   web,
 } from "../assets";
 
@@ -154,30 +157,31 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Knust",
-    icon: knust,
+    title: "MSc. Computer Science",
+    company_name: "University of Ghana",
+    icon: ug,
     iconBg: "#E6DEDD",
-    date: "Sept 2018 - Oct 2022",
+    date: "Oct 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Advanced Data Structures & Algorithms.",
+      "Advanced Database Systems.",
+      "Machine Learning with Big Data Analytics.",
+      "Principles of Wireless & Mobile Systems.",
+      "Advanced Computer Networks",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Knust",
-    icon: knust,
+    title: "Full stack Developer",
+    company_name: "Kaculoss",
+    icon: kaculoss,
     iconBg: "#383E56",
-    date: "Mar 2020 - Sept 2022",
+    date: "Jan 2022 - Present",
     points: [
-      "Designing, developing and maintaining high-quality mobile apps for iOS and Android platforms using the React Native frameworkDeveloping and maintaining web applications using React.js and other related technologies.",
-      "Writing clean, maintainable and efficient code that meets the requirements of clients or end-users.",
-      "Leveraging native APIs for deep integrations with both platforms.",
-      "Diagnosing and fixing bugs and performance bottlenecks for performance that feels native.",
-      "Creating app and UI components from wireframes and prototypes.",
+      "Designing user interactions on websites.",
+      "Developing servers and databases for website functionality.",
+      "Writing clean, functional code on the front- and back-end.",
+      "Coding for mobile platforms.",
+      "Testing and fixing bugs or other coding issues",
     ],
   },
   {
@@ -195,17 +199,30 @@ const experiences = [
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Kaculoss",
-    icon: kaculoss,
+    title: "React Native Developer",
+    company_name: "Knust",
+    icon: knust,
     iconBg: "#383E56",
-    date: "Jan 2022 - Present",
+    date: "Mar 2020 - Sept 2022",
     points: [
-      "Designing user interactions on websites.",
-      "Developing servers and databases for website functionality.",
-      "Writing clean, functional code on the front- and back-end.",
-      "Coding for mobile platforms.",
-      "Testing and fixing bugs or other coding issues",
+      "Designing, developing and maintaining high-quality mobile apps for iOS and Android platforms using the React Native frameworkDeveloping and maintaining web applications using React.js and other related technologies.",
+      "Writing clean, maintainable and efficient code that meets the requirements of clients or end-users.",
+      "Leveraging native APIs for deep integrations with both platforms.",
+      "Diagnosing and fixing bugs and performance bottlenecks for performance that feels native.",
+      "Creating app and UI components from wireframes and prototypes.",
+    ],
+  },
+  {
+    title: "React.js Developer",
+    company_name: "Knust",
+    icon: knust,
+    iconBg: "#E6DEDD",
+    date: "Sept 2018 - Oct 2022",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
 ];
@@ -238,6 +255,64 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "K-Store",
+    description:
+      "An ecommerce website that makes API calls to K-Store Admin page to fetch products for customers to buy. Payments may be done with mobile money and credit cards",
+    tags: [
+      {
+        name: "nextjs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "planetscale",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "prisma",
+        color: "violet-text-gradient",
+      },
+    ],
+    image: k_store,
+    link: "https://k-store.kaculoss.com/",
+  },
+  {
+    name: "K-Store Admin",
+    description:
+      "Can also be called, K-Store backend as this platform allows store owners to log in to their store, upload, update or delete products, track orders and do all administrations works for their store. The products are then pushed to the K-Store website for users to purchase through secure API calls.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "planetscale",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "prisma",
+        color: "green-text-gradient",
+      },
+    ],
+    image: k_store_admin,
+    link: "https://k-store-admin.kaculoss.com/",
+  },
   {
     name: "Keezy Messenger",
     description:
