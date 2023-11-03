@@ -51,7 +51,7 @@ import metaversus from "./projects/metaversus.jpeg";
 import netflix from "./projects/netflix.jpeg";
 import space from "./projects/space.jpeg";
 import three from "./projects/three-js.jpeg";
-import k_store_admin from "./projects/k-blog.jpeg";
+import k_store_admin from "./projects/k-store-admin.jpeg";
 import k_store from "./projects/k-store.jpeg";
 
 import cube from "./cube.png";

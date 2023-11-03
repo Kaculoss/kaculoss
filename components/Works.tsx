@@ -127,7 +127,7 @@ const Works = () => {
       </div>
 
       <div className={`${isViewAll ? "flex" : "hidden"} mt-12 flex-wrap gap-7`}>
-        {projects.slice(3, 12).map((project, index) => (
+        {projects.slice(3).map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
