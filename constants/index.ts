@@ -41,6 +41,11 @@ import {
   typescript,
   ug,
   web,
+  yemaachi,
+  jest,
+  next,
+  vue,
+  graphql,
 } from "../assets";
 
 export const navLinks = [
@@ -88,6 +93,26 @@ const services = [
 ];
 
 const technologies = [
+  {
+    name: "Vue Js",
+    icon: vue,
+    path: "vuejs.png",
+  },
+  {
+    name: "Graphql",
+    icon: graphql,
+    path: "graphql.png",
+  },
+  {
+    name: "Next Js",
+    icon: next,
+    path: "next.png",
+  },
+  {
+    name: "Jest",
+    icon: jest,
+    path: "jest.png",
+  },
   {
     name: "HTML 5",
     icon: html,
@@ -157,20 +182,6 @@ const technologies = [
 
 const experiences = [
   {
-    title: "MSc. Computer Science",
-    company_name: "University of Ghana",
-    icon: ug,
-    iconBg: "#E6DEDD",
-    date: "Oct 2023 - Present",
-    points: [
-      "Advanced Data Structures & Algorithms.",
-      "Advanced Database Systems.",
-      "Machine Learning with Big Data Analytics.",
-      "Principles of Wireless & Mobile Systems.",
-      "Advanced Computer Networks",
-    ],
-  },
-  {
     title: "Full stack Developer",
     company_name: "Kaculoss",
     icon: kaculoss,
@@ -182,6 +193,32 @@ const experiences = [
       "Writing clean, functional code on the front- and back-end.",
       "Coding for mobile platforms.",
       "Testing and fixing bugs or other coding issues",
+    ],
+  },
+  {
+    title: "Software Developer Intern",
+    company_name: "Yemaachi Biotechnology",
+    icon: yemaachi,
+    iconBg: "#E6DEDD",
+    date: "Jan 2024 - July 2024",
+    points: [
+      "Developed a website application to track the performances of all employees in the company. This application also has a Balanced Scorecard (BSC) feature that tracks the overall direction of the company.",
+      "Developed a service to automatically generate unique patient code for every patient enrolled in the company’s clinical data management system (Uvosyo) website as opposed to the manual entry of the code which was prone to human errors.",
+      "Performed series of unit tests with Jest on every code in Uvosyo backend in order to identify bugs and fix them for the system to work smoothly as intended.",
+    ],
+  },
+  {
+    title: "MSc. Computer Science",
+    company_name: "University of Ghana",
+    icon: ug,
+    iconBg: "#383E56",
+    date: "Oct 2023 - Sept 2024",
+    points: [
+      "Advanced Data Structures & Algorithms.",
+      "Advanced Database Systems.",
+      "Machine Learning with Big Data Analytics.",
+      "Principles of Wireless & Mobile Systems.",
+      "Advanced Computer Networks",
     ],
   },
   {

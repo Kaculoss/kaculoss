@@ -24,6 +24,10 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import photoshop from "./tech/photoshop.png";
+import graphql from "./tech/graphql.png";
+import next from "./tech/next.png";
+import jest from "./tech/jest.png";
+import vue from "./tech/vuejs.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -34,6 +38,7 @@ import knust from "./company/knust.png";
 import aesl from "./company/aesl.png";
 import kaculoss from "./company/kaculoss.png";
 import ug from "./company/ug.png";
+import yemaachi from "./company/yemaachi.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -111,4 +116,9 @@ export {
   k_store,
   k_store_admin,
   ug,
+  yemaachi,
+  graphql,
+  next,
+  vue,
+  jest,
 };
