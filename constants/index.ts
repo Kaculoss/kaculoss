@@ -113,16 +113,16 @@ const technologies = [
     icon: jest,
     path: "jest.png",
   },
-  {
-    name: "HTML 5",
-    icon: html,
-    path: "html.png",
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-    path: "css.png",
-  },
+  // {
+  //   name: "HTML 5",
+  //   icon: html,
+  //   path: "html.png",
+  // },
+  // {
+  //   name: "CSS 3",
+  //   icon: css,
+  //   path: "css.png",
+  // },
   {
     name: "JavaScript",
     icon: javascript,
@@ -163,16 +163,16 @@ const technologies = [
     icon: threejs,
     path: "threejs.svg",
   },
-  {
-    name: "Git",
-    icon: git,
-    path: "git.png",
-  },
-  {
-    name: "Figma",
-    icon: figma,
-    path: "figma.png",
-  },
+  // {
+  //   name: "Git",
+  //   icon: git,
+  //   path: "git.png",
+  // },
+  // {
+  //   name: "Figma",
+  //   icon: figma,
+  //   path: "figma.png",
+  // },
   {
     name: "Adobe Photoshop",
     icon: photoshop,
