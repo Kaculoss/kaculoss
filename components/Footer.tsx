@@ -37,7 +37,7 @@ const Footer = () => {
             <Image src={logo} alt="logo" className="w-44 h-16 object-contain" />
 
             <p className="font-normal text-[14px] text-white opacity-50 ">
-              Copyright @ 2021 - 2023 Kaculoss. All rights reserved.
+              Copyright @ 2023 Kaculoss. All rights reserved.
             </p>
             <div className="flex gap-4">
               {socials.map((social) => (
