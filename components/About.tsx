@@ -10,6 +10,7 @@ import Image, { StaticImageData } from "next/image";
 import { Tilt } from "react-tilt";
 import { SectionWrapper } from ".";
 import AnimateCounter from "./AnimateCounter";
+import Link from "next/link";
 
 interface IProps {
   index: number;
@@ -73,6 +74,15 @@ const About = () => {
             that solve real-world problems. Let's work together to bring your
             ideas to life!
           </motion.p>
+          <div className="mt-4">
+            <Link
+              target="_blank"
+              href="https://drive.google.com/file/d/1kHov2oV57eFUcwsj20KAF2OH2tiO5oBq/view?usp=sharing"
+              className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            >
+              My Resume
+            </Link>
+          </div>
         </div>
 
         <div className="hidden lg:flex flex-[1] flex-col gap-8 items-center justify-center w-full">
