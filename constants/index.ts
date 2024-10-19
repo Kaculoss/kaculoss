@@ -46,6 +46,8 @@ import {
   next,
   vue,
   graphql,
+  keezy_store,
+  c_and_g,
 } from "../assets";
 
 export const navLinks = [
@@ -200,7 +202,7 @@ const experiences = [
     company_name: "Yemaachi Biotechnology",
     icon: yemaachi,
     iconBg: "#E6DEDD",
-    date: "Jan 2024 - July 2024",
+    date: "Jan 2024 - Present",
     points: [
       "Developed a website application to track the performances of all employees in the company. This application also has a Balanced Scorecard (BSC) feature that tracks the overall direction of the company.",
       "Developed a service to automatically generate unique patient code for every patient enrolled in the company’s clinical data management system (Uvosyo) website as opposed to the manual entry of the code which was prone to human errors.",
@@ -292,10 +294,68 @@ const testimonials = [
 ];
 
 const projects = [
+  // {
+  //   name: "K-Store",
+  //   description:
+  //     "An ecommerce website that makes API calls to K-Store Admin page to fetch products for customers to buy. Payments may be done with mobile money and credit cards",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "typescript",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "tailwind",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "planetscale",
+  //       color: "orange-text-gradient",
+  //     },
+  //     {
+  //       name: "prisma",
+  //       color: "violet-text-gradient",
+  //     },
+  //   ],
+  //   image: k_store,
+  //   link: "https://k-store.vercel.app/",
+  // },
+  // {
+  //   name: "K-Store Admin",
+  //   description:
+  //     "Can also be called, K-Store backend as this platform allows store owners to log in to their store, upload, update or delete products, track orders and do all administrations works for their store. The products are then pushed to the K-Store website for users to purchase through secure API calls.",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "typescript",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "tailwind",
+  //       color: "orange-text-gradient",
+  //     },
+  //     {
+  //       name: "planetscale",
+  //       color: "violet-text-gradient",
+  //     },
+  //     {
+  //       name: "prisma",
+  //       color: "green-text-gradient",
+  //     },
+  //   ],
+  //   image: k_store_admin,
+  //   link: "https://k-store-admin.vercel.app/",
+  // },
   {
-    name: "K-Store",
+    name: "Keezy Store",
     description:
-      "An ecommerce website that makes API calls to K-Store Admin page to fetch products for customers to buy. Payments may be done with mobile money and credit cards",
+      "This E-Commerce Store features both admin and customer pages, product search, sorting, and filtering, as well as secure payments via mobile money or credit card. The site includes order tracking, authentication, and a dark/light mode toggle for an enhanced user experience.",
     tags: [
       {
         name: "nextjs",
@@ -310,21 +370,21 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "planetscale",
+        name: "sanity",
         color: "orange-text-gradient",
       },
       {
-        name: "prisma",
+        name: "paystack",
         color: "violet-text-gradient",
       },
     ],
-    image: k_store,
-    link: "https://k-store.kaculoss.com/",
+    image: keezy_store,
+    link: "https://keezy-store.vercel.app/",
   },
   {
-    name: "K-Store Admin",
+    name: "C&G Builders",
     description:
-      "Can also be called, K-Store backend as this platform allows store owners to log in to their store, upload, update or delete products, track orders and do all administrations works for their store. The products are then pushed to the K-Store website for users to purchase through secure API calls.",
+      "This site showcases a wide range of building materials with detailed descriptions, product filtering, and easy navigation. It allows users to browse products and access contact information for inquiries, offering a clean, responsive interface.",
     tags: [
       {
         name: "nextjs",
@@ -339,16 +399,16 @@ const projects = [
         color: "orange-text-gradient",
       },
       {
-        name: "planetscale",
+        name: "sanity",
         color: "violet-text-gradient",
       },
       {
-        name: "prisma",
+        name: "vite",
         color: "green-text-gradient",
       },
     ],
-    image: k_store_admin,
-    link: "https://k-store-admin.kaculoss.com/",
+    image: c_and_g,
+    link: "https://building-materials.vercel.app/",
   },
   {
     name: "Keezy Messenger",
@@ -377,7 +437,7 @@ const projects = [
       },
     ],
     image: messenger,
-    link: "https://messenger.kaculoss.com/",
+    link: "https://messenger-keezys-projects-b5a374c0.vercel.app/",
   },
   {
     name: "Dall-E Clone",
@@ -406,7 +466,7 @@ const projects = [
       },
     ],
     image: dalle,
-    link: "https://dall-e.kaculoss.com/",
+    link: "https://dall-e-kaculoss.vercel.app/",
   },
   {
     name: "Three AI",
@@ -435,7 +495,7 @@ const projects = [
       },
     ],
     image: three,
-    link: "https://three-ai.kaculoss.com/",
+    link: "https://threejs-ai-zeta.vercel.app/",
   },
   {
     name: "Metaverse",
@@ -464,7 +524,7 @@ const projects = [
       },
     ],
     image: metaversus,
-    link: "https://metaversus.kaculoss.com/",
+    link: "https://metaversus-kaculoss.vercel.app/",
   },
   {
     name: "Keezy's Comfy",
@@ -493,7 +553,7 @@ const projects = [
       },
     ],
     image: comfy,
-    link: "https://comfy.kaculoss.com/",
+    link: "https://keezy-comfy.netlify.app/",
   },
   {
     name: "Space",
@@ -522,7 +582,7 @@ const projects = [
       },
     ],
     image: space,
-    link: "https://space-tourism.kaculoss.com/",
+    link: "https://space-tourism-website-32eqk1wgx-kaculoss.vercel.app/",
   },
   {
     name: "Keezy's Netflix",
@@ -551,7 +611,7 @@ const projects = [
       },
     ],
     image: netflix,
-    link: "https://k-netflix.kaculoss.com/",
+    link: "https://netflix-clone-pi-three-68.vercel.app/",
   },
   {
     name: "K-Flair",
@@ -580,7 +640,7 @@ const projects = [
       },
     ],
     image: flair,
-    link: "https://k-flair.kaculoss.com/",
+    link: "https://k-flair-kaculoss.vercel.app/",
   },
   {
     name: "Keezy's Jobster",
@@ -609,7 +669,7 @@ const projects = [
       },
     ],
     image: jobster,
-    link: "https://k-jobster.kaculoss.com/",
+    link: "https://keezy-jobster.netlify.app/",
   },
   {
     name: "Keezy Headphones",
@@ -638,7 +698,7 @@ const projects = [
       },
     ],
     image: headphones,
-    link: "https://k-headphones.kaculoss.com/",
+    link: "https://keezy-headphones-kaculoss.vercel.app/",
   },
   {
     name: "Keezy Blog",
@@ -667,7 +727,7 @@ const projects = [
       },
     ],
     image: blog,
-    link: "https://k-blog.kaculoss.com/",
+    link: "https://keezy-blog-kaculoss.vercel.app/",
   },
   {
     name: "Ayzer Group International",
@@ -696,7 +756,7 @@ const projects = [
       },
     ],
     image: ayzer,
-    link: "https://ayzergint.kaculoss.com/",
+    link: "https://ayzergint-kaculoss.vercel.app/",
   },
 ];
 

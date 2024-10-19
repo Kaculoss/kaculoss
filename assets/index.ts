@@ -58,6 +58,8 @@ import space from "./projects/space.jpeg";
 import three from "./projects/three-js.jpeg";
 import k_store_admin from "./projects/k-store-admin.jpeg";
 import k_store from "./projects/k-store.jpeg";
+import keezy_store from "./projects/keezy-store.jpeg";
+import c_and_g from "./projects/C&G.jpeg";
 
 import cube from "./cube.png";
 
@@ -115,6 +117,8 @@ export {
   cube,
   k_store,
   k_store_admin,
+  keezy_store,
+  c_and_g,
   ug,
   yemaachi,
   graphql,
